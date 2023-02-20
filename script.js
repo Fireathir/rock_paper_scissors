@@ -2,6 +2,10 @@
 let userChoice;
 let computerChoice;
 let comparisonResult = "string";
+let playerScore = 0;
+let computerScore =0;
+
+
 
 //function to collect the users input
 function userInput(userChoice){
@@ -35,27 +39,33 @@ function compareResults(){
         return comparisonResult = "It's a draw! You both picked the same option!";
     } 
     else if (userChoice == "rock" && computerChoice == "paper"){
+        computerScore += 1;
         return comparisonResult = "You lose! You chose rock, the computer chose paper!";
     } 
     else if (userChoice == "rock" && computerChoice == "scissors"){
+        playerScore += 1;
         return comparisonResult = "You win! You chose rock, the computer chose scissors!";
     } 
     else if (userChoice == "paper" && computerChoice == "paper"){
         return comparisonResult = "It's a draw! You both picked the same option!";
     }
     else if (userChoice == "paper" && computerChoice == "rock"){
+        playerScore += 1;
         return comparisonResult = "You win! You chose paper, the computer chose rock!";
     } 
     else if (userChoice == "paper" && computerChoice == "scissors"){
+        computerScore += 1;
         return comparisonResult = "You lose! You chose paper, the computer chose Scissors!";
     } 
     else if (userChoice == "scissors" && computerChoice == "scissors"){
         return comparisonResult = "It's a draw! You both picked the same option!";
     }
     else if (userChoice == "scissors" && computerChoice == "paper"){
+        playerScore += 1;
         return comparisonResult = "You win! You chose scissors, the computer chose paper!";
     } 
     else if (userChoice == "scissors" && computerChoice == "rock"){
+        computerScore += 1;
         return comparisonResult = "You lose! You chose scissors, the computer chose rock!";
     }
 }
@@ -68,6 +78,7 @@ function game(){
 }
 
 
-
-//Run the game
-game();
+//Run the game when page loads
+while (playerScore <5 && computerScore <5){
+    game();
+}
