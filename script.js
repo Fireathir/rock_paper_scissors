@@ -66,7 +66,7 @@ function compareResults(){
 function game(){
     computerChoice = computerInput();
     comparisonResult = (compareResults());
-    console.log(comparisonResult);
+    gameplayReport.textContent = comparisonResult;
     uScore.textContent = playerScore;
     cScore.textContent = computerScore;
     if (playerScore == 5) {
@@ -95,6 +95,8 @@ const btn3 = document.querySelector("#paperButton");
 const uScore = document.querySelector('#playerScore');
 
 const cScore = document.querySelector('#computerScore');
+
+const gameplayReport = document.querySelector("#gameplayReport");
 
 //EventListenerFunction
 btn1.addEventListener('click', clickRock);
