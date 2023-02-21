@@ -1,0 +1,76 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.body{
+    background-color: #4D455D;
+}
+.buttons{
+   text-align: center;
+   background-color: #7DB9B6;
+   margin-left:200px;
+   margin-right: 200px;
+   font-size: 50px;
+   border: 2px solid black;
+   border-radius: 25px;
+}
+#results{
+    justify-content: center;
+
+    margin-left: 100px;
+    margin-right: 100px;
+    display:flexbox;
+}
+#playerScore{
+
+    text-align: center;
+    font-size: 40px;
+}
+#computerScore{
+
+    font-size: 40px;
+    text-align: center;
+}
+.score1,
+.score2{
+
+    text-align: center;
+
+    font-size: 24px;
+    padding: 40px;
+}
+.score1{
+
+}
+.score2{
+
+}
+.playerBox{
+    background-color: #E96479;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.computerBox{
+    background-color: #F5E9CF;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.mainHeader{
+    text-align: center;
+    color: #F5E9CF;
+}
+.infoText{
+    text-align: center;
+    color: #F5E9CF;
+}
+.footerText{
+
+    color:#F5E9CF;
+    font-size: 15px;
+    text-align: center;
+    font-style: oblique;
+    margin-top: 100px;
+}
+
+
+

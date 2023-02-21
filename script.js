@@ -1,17 +1,10 @@
+
 // Rock, paper, scissors
 let userChoice;
 let computerChoice;
 let comparisonResult = "string";
 let playerScore = 0;
 let computerScore =0;
-
-
-
-//function to collect the users input
-function userInput(userChoice){
-    userChoice = prompt("Choose rock, paper or scissors!");
-    return userChoice.toLowerCase();
-}
 
 //random generator for computer choice
 function randomNumber(number){
@@ -71,14 +64,65 @@ function compareResults(){
 }
 //Game function
 function game(){
-    userChoice = userInput();
     computerChoice = computerInput();
     comparisonResult = (compareResults());
     console.log(comparisonResult);
+    uScore.textContent = playerScore;
+    cScore.textContent = computerScore;
+    if (playerScore == 5) {
+        alert("You won the game! This game will restart automatically.");
+        window.location.reload();
+    }
+    else if (computerScore == 5){
+        alert("You lost the game! This game will restart automatically");
+        window.location.reload();
+    }
+    else {
+
+    }
 }
 
 
-//Run the game when page loads
-while (playerScore <5 && computerScore <5){
+
+
+//DOM
+const btn1 = document.querySelector("#rockButton");
+
+const btn2 = document.querySelector("#scissorsButton");
+
+const btn3 = document.querySelector("#paperButton");
+
+const uScore = document.querySelector('#playerScore');
+
+const cScore = document.querySelector('#computerScore');
+
+//EventListenerFunction
+btn1.addEventListener('click', clickRock);
+
+btn2.addEventListener('click', clickScissor);
+
+btn3.addEventListener('click', clickPaper);
+
+//Functions for changing the userChoice and starts game
+function clickRock (){
+    userChoice = "rock";
     game();
+    console.log(userChoice);
 }
+
+function clickScissor(){
+    userChoice ="scissors";
+    game();
+    console.log(userChoice);
+}
+
+function clickPaper(){
+    userChoice ="paper";
+    game();
+    console.log(userChoice);
+}
+
+//keeping score
+
+
+

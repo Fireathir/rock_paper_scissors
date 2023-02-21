@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
-<body>
-    
+<body class="body">
+    <h1 class="mainHeader"> Rock, Paper, Scissors!</h1>
+    <h2 class="infoText">The first one to reach 5 points wins. The game resets itsef when one side wins!</h2>
+    <div class="buttons">
+        <button id="rockButton">Rock</button>
+        <button id="scissorsButton">Scissors</button>
+        <button id="paperButton">Paper</button>
+    </div>
+    <div id="results">
+        <div class="playerBox">
+            <p class="score1">Player Score:</p>
+            <p id="playerScore">0</p>
+         </div> 
+         <div class="computerBox">
+            <p class ="score2">Computer Score:</p>
+            <p id="computerScore">0</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2 class="footerText">
+            Made by Jimmy Brandt as a part of The Odin Project Curriculum.
+        </h2>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
